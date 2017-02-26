@@ -11,18 +11,18 @@ import lombok.Data;
 @Entity
 public class User {
 
-	@Id @GeneratedValue
-	private	Long id;
+    @Id @GeneratedValue
+    private Long id;
 
-	private String firstName;
-	private String lastName;
-	private String description;
+    private String firstName;
+    private String lastName;
+    private String description;
 
-	public User() {}
-	
-	public User(String firstName, String lastName, String desc) {
-		this.firstName = firstName;
-		this.lastName = lastName;
-		this.description = desc;
-	}
+    public User() {}
+    
+    public User(String firstName, String lastName, String desc) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.description = desc;
+    }
 }

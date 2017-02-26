@@ -11,9 +11,9 @@ import proto.entity.UserRepository;
 @Controller
 public class DefaultController {
 
-	@Autowired
-	private UserRepository repository;
-	
+    @Autowired
+    private UserRepository repository;
+    
     /**
      * 初期画面を表示する
      * @return 初期画面へ遷移
@@ -29,9 +29,9 @@ public class DefaultController {
      */
     @RequestMapping(value = "/setData", method = RequestMethod.GET)
     public String setData() {
-    	repository.save(new User("一郎", "舞黒", "説明１"));
-    	repository.save(new User("二郎", "舞黒", "説明２"));
-    	repository.save(new User("三郎", "舞黒", "説明３"));
+        repository.save(new User("一郎", "舞黒", "説明１"));
+        repository.save(new User("二郎", "舞黒", "説明２"));
+        repository.save(new User("三郎", "舞黒", "説明３"));
         return "index";
     }
 }
