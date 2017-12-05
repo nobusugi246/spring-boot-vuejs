@@ -1,6 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <div class="box">
+      <div class="url">/api/user</div>
+      <pre>{{ user }}</pre>
+    </div>
     <h2>Essential Links</h2>
     <ul>
       <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
@@ -21,30 +25,58 @@
 </template>
 
 <script>
-export default {
-  name: 'HelloWorld',
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
+  import axios from 'axios'
+
+  export default {
+    name: 'HelloWorld',
+    data () {
+      return {
+        msg: 'Welcome to Your Vue.js App',
+        user: null
+      }
+    },
+    created () {
+      axios.get('/api/user')
+        .then((response) => {
+          this.user = response.data
+        })
+        .catch((error) => console.log(error))
     }
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
-  font-weight: normal;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
+  h1, h2 {
+    font-weight: normal;
+  }
+
+  .box {
+    text-align: left;
+    margin: auto;
+    width: 400px;
+    background-color: #eff0f1;
+  }
+  .url {
+    padding: 10px 20px;
+    background-color: #c8cdd4;
+  }
+
+  pre {
+    padding: 0 20px 20px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  a {
+    color: #42b983;
+  }
 </style>
