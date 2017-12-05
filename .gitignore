@@ -2,7 +2,7 @@
 .directory
 node_modules/
 .gradle
-/build/
+build/
 !gradle/wrapper/gradle-wrapper.jar
 src/main/resources/static/
 src/main/resources/templates/index.html
@@ -32,7 +32,6 @@ selenium-debug.log
 *.njsproj
 *.sln
 nbproject/private/
-build/
 nbbuild/
 dist/
 nbdist/
