@@ -1,4 +1,4 @@
-package proto.entity;
+package com.example.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,7 +19,7 @@ public class User {
     private String description;
 
     public User() {}
-    
+
     public User(String firstName, String lastName, String desc) {
         this.firstName = firstName;
         this.lastName = lastName;

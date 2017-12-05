@@ -1,27 +1,27 @@
-package proto;
+package com.example.api;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import proto.entity.User;
-import proto.entity.UserRepository;
+import com.example.entity.User;
+import com.example.entity.UserRepository;
 
-@Controller
-public class DefaultController {
+@RestController
+@RequestMapping(value = "/api")
+public class UserController {
 
     @Autowired
     private UserRepository repository;
 
-    @RequestMapping("/")
-    public String index() {
-        return "index";
+    @RequestMapping(value = "/user", method = RequestMethod.POST)
+    public void setData() {
+        repository.save(new User("Jon", "Snow", "Ned Stark's bastard son"));
     }
 
-    @RequestMapping(value = "/setData", method = RequestMethod.GET)
-    public String setData() {
-        repository.save(new User("1", "Jonh", "Snow"));
-        return "index";
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public User getData() {
+        return new User("Jon", "Snow", "Ned Stark's bastard son");
     }
 }
