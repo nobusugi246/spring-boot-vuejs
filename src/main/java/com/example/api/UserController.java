@@ -16,12 +16,12 @@ public class UserController {
     private UserRepository repository;
 
     @RequestMapping(value = "/user", method = RequestMethod.POST)
-    public void setData() {
+    public void set() {
         repository.save(new User("Jon", "Snow", "Ned Stark's bastard son"));
     }
 
     @RequestMapping(value = "/user", method = RequestMethod.GET)
-    public User getData() {
+    public User get() {
         return new User("Jon", "Snow", "Ned Stark's bastard son");
     }
 }
