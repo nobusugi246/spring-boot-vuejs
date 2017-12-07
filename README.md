@@ -1,6 +1,6 @@
 # vue-gradle-kickstart
 
-> A Vue.js project
+A Vue.js project with Spring Boot and Gradle
 
 ## Build Setup
 
