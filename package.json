@@ -10,7 +10,7 @@
     "unit": "cross-env BABEL_ENV=test karma start src/test/unit/karma.conf.js --single-run",
     "e2e": "node src/test/e2e/runner.js",
     "test": "./gradlew test && npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src src/test/unit/specs src/test/e2e/specs",
+    "lint": "eslint --ext .js,.vue src/vue src/test/unit/specs src/test/e2e/specs",
     "build": "node webpack/build/build.js",
     "package": "npm run build && ./gradlew build"
   },
