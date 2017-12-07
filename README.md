@@ -8,7 +8,10 @@
 # install dependencies
 npm install
 
-# serve with hot reload at localhost:8080
+# run gradle dev env
+./gradlew bootRun
+
+# serve with hot reload at localhost:8181
 npm run dev
 
 # build for production with minification
