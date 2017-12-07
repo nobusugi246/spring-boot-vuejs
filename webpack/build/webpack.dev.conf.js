@@ -1,4 +1,5 @@
 'use strict'
+
 const utils = require('./utils')
 const webpack = require('webpack')
 const config = require('../config')
@@ -46,7 +47,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     new webpack.NoEmitOnErrorsPlugin(),
     // https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
-      filename: '../../webpack/index.html',
+      filename: 'index.html',
       template: '../../webpack/index.html',
       inject: true
     }),
