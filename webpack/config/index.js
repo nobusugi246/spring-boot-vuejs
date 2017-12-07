@@ -13,7 +13,12 @@ module.exports = {
     proxyTable: {
       '/api': {
         target: 'http://localhost:8765',
-        secure: false
+        changeOrigin: true,
+        secure: false,
+        cookieDomainRewrite: '',
+        onProxyReq: function (request, req, res) {
+          request.setHeader('origin', 'http://localhost:8765')
+        }
       }
     },
 
