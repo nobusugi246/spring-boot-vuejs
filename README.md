@@ -21,13 +21,16 @@ npm run build --report
 # shortcut of npm run build and ./gradlew build
 npm run package
 
-# run unit tests
+# run java tests
+./gradlew test
+
+# run vue unit tests
 npm run unit
 
 # run e2e tests
 npm run e2e
 
-# run all tests
+# run all tests (java, vue, e2e)
 npm test
 ```
 
