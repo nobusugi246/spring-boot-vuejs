@@ -1,4 +1,4 @@
-# spring-boot-vuejs
+# vue-gradle-kickstart
 
 > A Vue.js project
 
