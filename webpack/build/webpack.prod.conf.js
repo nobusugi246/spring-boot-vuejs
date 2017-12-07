@@ -63,7 +63,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     // see https://github.com/ampedandwired/html-webpack-plugin
     new HtmlWebpackPlugin({
       filename: process.env.NODE_ENV === 'testing'
-        ? '../../webpack/index.html'
+        ? 'index.html'
         : config.build.index,
       template: '../../webpack/index.html',
       inject: true,
