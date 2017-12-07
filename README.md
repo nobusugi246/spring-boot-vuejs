@@ -17,6 +17,10 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 
+# build for production with minification and JAR packaging
+# shortcut of npm run build and ./gradlew build
+npm run package
+
 # run unit tests
 npm run unit
 
